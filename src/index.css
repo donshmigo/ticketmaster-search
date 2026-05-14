@@ -1,0 +1,78 @@
+:root {
+  --bg: #08090b;
+  --ink: #13110e;
+  --paper: #fff8dc;
+  --muted: rgba(255, 248, 220, 0.72);
+  --line: rgba(255, 248, 220, 0.16);
+  --gold: #ffc627;
+  --red: #ff4b2b;
+  --display: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  --condensed: 'Avenir Next Condensed', 'Bahnschrift Condensed', 'Arial Narrow', sans-serif;
+  --body: 'Avenir Next', 'Trebuchet MS', sans-serif;
+
+  color: var(--paper);
+  background: var(--bg);
+  font: 16px/1.5 var(--body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  background:
+    radial-gradient(circle at top left, rgba(255, 75, 43, 0.22), transparent 32rem),
+    radial-gradient(circle at bottom right, rgba(255, 198, 39, 0.14), transparent 28rem),
+    var(--bg);
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  content: '';
+  background-image:
+    linear-gradient(rgba(255, 248, 220, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 248, 220, 0.035) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(to bottom, black, transparent 78%);
+}
+
+body::after {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  content: '';
+  opacity: 0.18;
+  background-image: radial-gradient(rgba(255, 248, 220, 0.45) 0.7px, transparent 0.7px);
+  background-size: 5px 5px;
+  mix-blend-mode: screen;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--ink);
+}
