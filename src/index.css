@@ -1,16 +1,23 @@
 :root {
-  --bg: #08090b;
-  --ink: #13110e;
-  --paper: #fff8dc;
-  --muted: rgba(255, 248, 220, 0.72);
-  --line: rgba(255, 248, 220, 0.16);
-  --gold: #ffc627;
-  --red: #ff4b2b;
-  --display: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  --condensed: 'Avenir Next Condensed', 'Bahnschrift Condensed', 'Arial Narrow', sans-serif;
-  --body: 'Avenir Next', 'Trebuchet MS', sans-serif;
+  --bg: #f6f8fc;
+  --surface: #ffffff;
+  --surface-soft: #eef3ff;
+  --surface-glass: rgba(255, 255, 255, 0.72);
+  --ink: #07111f;
+  --muted: #5f6b7a;
+  --soft: #94a3b8;
+  --line: rgba(15, 23, 42, 0.1);
+  --line-strong: rgba(15, 23, 42, 0.18);
+  --blue: #1455ff;
+  --blue-dark: #0c38b8;
+  --cyan: #10c8ff;
+  --mint: #25d0a4;
+  --violet: #7c3aed;
+  --shadow: 0 28px 90px rgba(15, 23, 42, 0.14);
+  --shadow-soft: 0 18px 46px rgba(15, 23, 42, 0.1);
+  --body: 'Avenir Next', 'SF Pro Display', 'Segoe UI', sans-serif;
 
-  color: var(--paper);
+  color: var(--ink);
   background: var(--bg);
   font: 16px/1.5 var(--body);
   font-synthesis: none;
@@ -27,9 +34,11 @@ html {
   min-width: 320px;
   min-height: 100%;
   background:
-    radial-gradient(circle at top left, rgba(255, 75, 43, 0.22), transparent 32rem),
-    radial-gradient(circle at bottom right, rgba(255, 198, 39, 0.14), transparent 28rem),
+    radial-gradient(circle at 8% 2%, rgba(20, 85, 255, 0.14), transparent 30rem),
+    radial-gradient(circle at 92% 18%, rgba(16, 200, 255, 0.18), transparent 28rem),
+    radial-gradient(circle at 70% 92%, rgba(124, 58, 237, 0.1), transparent 34rem),
     var(--bg);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -43,22 +52,12 @@ body::before {
   inset: 0;
   pointer-events: none;
   content: '';
+  opacity: 0.58;
   background-image:
-    linear-gradient(rgba(255, 248, 220, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 248, 220, 0.035) 1px, transparent 1px);
-  background-size: 44px 44px;
-  mask-image: linear-gradient(to bottom, black, transparent 78%);
-}
-
-body::after {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  content: '';
-  opacity: 0.18;
-  background-image: radial-gradient(rgba(255, 248, 220, 0.45) 0.7px, transparent 0.7px);
-  background-size: 5px 5px;
-  mix-blend-mode: screen;
+    linear-gradient(rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black, transparent 72%);
 }
 
 button,
@@ -73,6 +72,6 @@ a {
 }
 
 ::selection {
-  background: var(--gold);
-  color: var(--ink);
+  background: var(--blue);
+  color: white;
 }
